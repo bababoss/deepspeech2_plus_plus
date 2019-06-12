@@ -1,0 +1,5 @@
+python -m multiproc train.py --visdom --cuda  --train-manifest data/merged_train_manifest.csv --val-manifest data/merged_test_manifest.csv --augment --checkpoint --checkpoint-per-batch 32
+
+watch -n0.1 nvidia-smi
+
+python -m multiproc train.py --visdom --cuda  --train-manifest data/merged_train_manifest.csv --val-manifest data/merged_test_manifest.csv --augment --checkpoint --checkpoint-per-batch 1000
